@@ -75,19 +75,44 @@
 ---
 
 ## 5.  Project Architecture
-Fractured-Heart/
-│
-├── assets/ # Art, audio, maps
-├── code/
-│ ├── main.py # Game entry point
-│ ├── level.py # Map loading and logic
-│ ├── enemy.py # Enemy AI and behavior
-│ ├── npc.py # NPC and dialogue system
-│ └── ... # Other modules (particles, UI, etc.)
-├── tests/ # Unit and integration tests
-├── docs/ # Documentation
-└── README.md # Project description
 
+Module Structure
+The project is organized into several key directories and modules:
+
+assets/
+Contains all images, sounds, and other media files.
+
+code/
+Houses the main game logic:
+
+main.py: Entry point of the game.
+level.py / level_story.py: Manage map creation, sprite grouping, chunk loading, and enemy respawning.
+player.py & enemy.py: Define entity behavior (movement, combat, animation).
+particles_story.py: Handles particle effects (magic spells, enemy death animations).
+enemy_spawner.py: Implements the enemy respawn system.
+start_screen.py: Provides the main menu interface.
+npc.py: Manages NPC behaviors and dialogues.
+docs/
+Contains documentation files.
+
+tests/
+Houses unit tests and integration tests.
+
+Key Components and Their Roles
+Main Game Loop (main.py):
+Initializes Pygame, loads assets, displays loading and transition screens, and launches the main menu. It then conditionally starts the regular game or story mode based on user input.
+
+Level Management (level.py / level_story.py):
+Constructs the game map from CSV files, assigns sprites to chunks, and manages enemy spawn points.
+
+Entity Classes (player.py & enemy.py):
+Define the behaviors, collision logic, and animations for the player and enemy characters.
+
+Optimization Techniques (ChunkedCameraGroup):
+Implements chunk loading and view culling to ensure that only visible sprites are rendered.
+
+AI Integration (enemy_ai, Dialogue System in npc.py):
+Enemies and NPCs use AI logic to interact with the player. Dialogue systems provide branching conversations that influence gameplay.
 ---
 
 ## 6. Screenshots 
