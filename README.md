@@ -121,5 +121,5 @@ The project is organized into several key directories and modules:
 
 ## 6. Screenshots 
 
-![Main Menu](assets/screenshots/menu.png)
+![Main Menu](assets/screenshots)
 
