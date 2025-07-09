@@ -1,8 +1,6 @@
 # 🎮 Fractured‑Heart
 
 *A 2D Zelda‑Inspired Adventure Game*
-
-**Team Members**: Wildan, Mahtab, Marwan, Abizar, Yousif Faisal  
 **Date**: February 2025
 
 ---
@@ -80,4 +78,16 @@
 ---
 
 ## 5. 🧱 Project Architecture
+Fractured-Heart/
+│
+├── assets/ # Art, audio, maps
+├── code/
+│ ├── main.py # Game entry point
+│ ├── level.py # Map loading and logic
+│ ├── enemy.py # Enemy AI and behavior
+│ ├── npc.py # NPC and dialogue system
+│ └── ... # Other modules (particles, UI, etc.)
+├── tests/ # Unit and integration tests
+├── docs/ # Documentation
+└── README.md # Project description
 
